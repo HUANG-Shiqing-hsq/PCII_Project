@@ -10,7 +10,8 @@ import java.util.Random;
 /** class Etat pour le modèle
  * 1. définit une variable hauteur
  * 2. définit une méthode jump: permet d’augmenter la valeur de la hauteur
- * 3. définit une méthode moveDown: permet de modifier la valeur de la hauteur de quelques pixels vers le bas*/
+ * 3. définit une méthode moveDown: permet de modifier la valeur de la hauteur de quelques pixels vers le bas
+   4. définit une méthode testPerdu: permet de détecter les collisions*/
 public class Etat {
 
     private int hauteur;
@@ -54,6 +55,7 @@ public class Etat {
         return parcours;
     }
 
+    /** testPerdu */
     public boolean testPerdu(){
         int x = Affichage.OVAL_X + Affichage.LARG_Oval/2;
         double y = this.hauteur - Affichage.STROKE/2;
