@@ -1,3 +1,10 @@
+/** Class Oiseau 
+    1. définit les donees de l'oiseau:
+           delai: qui indique le temps (en millisecondes) entre chaque mise à jour de l’affichage pour l’oiseau
+           etat: qui permet de savoir dans quelle position est l’oiseau
+           hauteur: la hauteur de l’oiseau dans la fenêtre graphique
+           position: l’abscisse 
+     2.La fonction run met à jour l’état et la position de l’oiseau toutes les delai millisecondes */
 package model;
 
 import view.Affichage;
@@ -21,22 +28,27 @@ public class Oiseau extends Thread{
         this.vueOiseau.Ajoute_Oiseau(this);
     }
 
+    /** getEtat */
     public int getEtat() {
         return etat;
     }
 
+    /** getHauteur */
     public int getHauteur() {
         return hauteur;
     }
 
+    /** getPosition */
     public int getPosition() {
         return position;
     }
 
+    /** setPosition */
     public void setPosition() {
         this.position -= 5;
     }
 
+    /** setEtat */
     public void setEtat() {
         if(this.etat == 7)
             this.etat = 0;
